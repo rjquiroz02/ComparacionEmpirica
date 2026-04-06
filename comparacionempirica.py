@@ -59,10 +59,18 @@ if __name__ == "__main__":
     desv_rec = calcular_desviacion(tiempos_recursivo)
 
     #imprimir resultados
-    print("--- Tiempos Iterativos ---")
-    print("Iterativo:", tiempos_iterativo)
+    #print("--- Tiempos Iterativos ---")
+    #print("Iterativo:", tiempos_iterativo)
+    #print("\n--- Tiempos Recursivos ---")
+    #print("Recursivo:", tiempos_recursivo)
+
+    print("\n--- Tiempos Iterativos ---") #imprimir en columnas
+    for t in tiempos_iterativo:
+        print(f"{t:.8f}")
     print("\n--- Tiempos Recursivos ---")
-    print("Recursivo:", tiempos_recursivo)
+    for t in tiempos_recursivo:
+        print(f"{t:.8f}")
+
     print("\n--- m/d Iterativos ---")
     print("Media iterativo:", round(media_iter, 8))  #round redondea a 8 decimales
     print("Desviacion iterativo:", round(desv_iter, 8))
